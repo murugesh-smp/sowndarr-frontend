@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{ 
+position:relative; margin:0px; padding:0px;
+font-family: 'Roboto', sans-serif;
+ background: #f2f2f2;
+}
+
+#wrapper{ margin: 0px; padding: 0px; width: 100%; display: block;
+   position: relative;
+
+}
+.contant-box{ width: 1000px; margin:20px auto 0px; display: block; background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    overflow: hidden;
+ }
+ .tab-box{   clear: both;  width: 100%; position: relative; }
+ .tab-nav{list-style-type: none; margin: 0px; padding: 0px; display: block;}
+ .tab-nav li{ list-style-type: none; margin: 0 15px; padding:0px 0; position: relative; float: left; 
+    display: inline-block; text-align: center; width: 30%;
+    position: relative;
+       
+ }
+.tab-nav li a{ color: #303030; background: #ececec; margin: 0px; padding: 15px 0; font-size: 18px; font-weight: normal;
+    text-decoration: none;
+    display: block;
+     
+
+  }
+  .tab-nav li.active a,
+.tab-nav li a:hover{
+    background: #44a5f6;
+    color: #fff;
+
+
+}
+
+.tab-nav li.active::before {
+  content: '';
+  position: absolute;
+  display: block;    
+  width: 0px;        
+  left: 50%;
+bottom: 8px;
+  border: 15px solid transparent;
+  border-bottom: 0;
+  border-top: 15px solid #44a5f6;
+  transform: translate(-50%, calc(100% + 5px));
+}
+
+.tab-content{ display: block;  margin: 15px 0px; padding: 0px; position: relative; width: 100%;  clear: both; float: left;}
+.tab-list-item{width: 100%; clear: both; position: relative; margin:0px; padding: 0px;
+}
+.tab-list-content{
+    list-style-type: none;
+    margin:0px;
+    padding: 0px; 
+    position: relative;
+}
+
+.list-of-info{ list-style-type: none; margin: 0 15px; position: relative; float: left; 
+    display: inline-block;  width: 30%; }
+
+.selct-list-itme{ color: #303030;
+font-size: 15px;
+margin: 0 0 14px;
+padding: 0px;
+float: left;
+width: 100%;
+display: block; }
+.selct-list-itme span{ color: #303030; font-size: 15px; margin:0 8px; padding: 0px;  }
+
+.sp-button-container{
+    text-align: center;
+float: none;
+clear: both;
+width: 100%;
+display: block;
+}
+.sp-choose{
+        background: blue!important;
+    text-align: center!important;;
+    color: #fff!important;;
+    border-radius: 25px!important;;
+    font-weight: normal!important;;
+    border: 0px!important;;
+    text-shadow: none!important;;
+    font-size: 16px!important;;
+    text-align: center!important;;
+    padding: 6px 16px!important;;
+    display: block!important;;
+    margin: 0px auto 0 !important;;
+    float: none!important;;
+}
+
+.top-header{
+    
+    width: 100%; margin: 0px; padding: 20px 0px; display: block; position: relative;
+    float: left;  background: #fa0019;
+
+}
+.left-box{float: left; width: 40%; margin: 0px; padding: 0 15px;}
+.top-profile{ position:relative; width: 100%; }
+.spl-val{ float: left; line-height: normal; margin: 9px 0 0; }
+.top-profile img.profile-img{ float: left; border-radius: 50%; width: 60px; height: 60px; max-width: 100%;margin-right: 15px; line-height: 60px; }
+.title-name{ float: left; color: #fff; margin: 0px; padding: 0px; line-height: normal; font-size: 20px; }
+.sub-name{ float: left; color: #fff;  margin: 0px; padding: 0px; line-height: normal; font-size:15px;  clear: both ;}
+.right-box{ float: right;
+margin:0px;
+padding: 0px;
+text-align: right;
+width: 50%;  
+ }
+ .right-menu{ float: right; position: relative; display: block; }
+ .right-menu ul { margin: 19px 0;
+padding: 0px;
+position: relative;
+list-style-type: none;
+float: left;
+width: 100%;}
+ .right-menu ul li{ list-style-type: none; margin: 0 5px; padding: 0px; position: relative; float: left;}
+.right-menu ul  li a{ color: #fff; margin: 0px; padding: 5px 10px; font-size: 15px; float:left; text-decoration: none;}
+.right-menu ul  li .active-btn{
+    background: #fff;
+    color: #834f5b;
+    border: 0px;
+    padding: 5px 10px; font-size: 15px;
+}

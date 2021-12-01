@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Meta information -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- Title-->
+<title>HTML Work</title>
+
+<!-- CSS Stylesheet-->
+ <link rel="stylesheet" type="text/css" href="css/spectrum.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+<body>
+<div id="wrapper"> 
+<div class="contant-box">
+	<div class="tab-box">
+		<ul class="tab-nav">
+			<li class="active"><a href="#">Heading</a></li>
+			<li> <a href="#">Sidebar</a></li>
+			<li> <a href="#">Main body</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-list-item">
+				<ul class="tab-list-content">
+					<li  class="list-of-info">
+						<div class="selct-list-itme">
+							<input id="head_bg_col" class="input-box-set" />
+							<span>Background Color</span>
+						</div>
+						<div class="selct-list-itme">
+							<input id="Men_col" class="input-box-set" />
+							<span>Menu text color</span>
+						</div>
+					</li>
+					<li  class="list-of-info">
+						<div class="selct-list-itme">
+							<input id="your_name" class="input-box-set" />
+							<span>Your Name</span>
+						</div>
+						<div class="selct-list-itme">
+							<input id="Pro_des" class="input-box-set" />
+							<span>Designation</span>
+						</div>
+					</li>
+					<li  class="list-of-info">
+						<div class="selct-list-itme">
+							<input id="menu_act_bg_col" class="input-box-set" />
+							<span>Contact button color</span>
+						</div>
+						<div class="selct-list-itme">
+							<input id="btn_text_col" class="input-box-set" />
+							<span>Contact button text color</span>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<header id="header" class="top-header">
+			
+			<div class="left-box">
+				
+					<div class="top-profile">
+						<img src="images/profile-icon.jpg" alt="profileimg" class="profile-img">
+						<span class="spl-val">
+						<h1 id="y-name" class="title-name">Your Name</h1>
+						<p id="y-des" class="sub-name">Ui developer</p>
+						</span>
+
+					</div>
+
+			</div>
+			<div class="right-box">
+				<nav class="right-menu" id="right-menu_acc">
+					<ul>
+						<li>
+							<button class="active-btn" id="btn_colo">Contact me</button>
+						</li>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Get in Touch</a>
+						</li>
+					</ul>
+
+				</nav>
+			</div>
+
+
+		</header>
+
+</div>
+
+
+
+</div><!--wrapper-->
+
+
+<!-- Jquery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="js/spectrum.js"></script>
+<script type="text/javascript" src="js/jquery.spectrum-fi.js"></script>
+<script type="text/javascript">
+$('#head_bg_col').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:true,
+        showInput:true,
+        showAlpha:true,
+        showSelectionPalette: true
+});
+
+$('#Men_col').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:false,
+        showSelectionPalette: true
+});
+
+$('#your_name').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:false,
+        showSelectionPalette: true
+});
+
+$('#Pro_des').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:false,
+        showSelectionPalette: true
+});
+
+$('#menu_act_bg_col').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:false,
+        showSelectionPalette: true
+});
+
+
+
+$('#btn_text_col').spectrum({
+  flat: false,
+      showInitial: true,
+        showPalette: true,
+         showButtons:true,
+        showInitial:false,
+        showSelectionPalette: true
+});
+
+
+
+$('#head_bg_col').on('move.spectrum', function(e, tinyColor) {
+    var color_bg = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#header").css('backgroundColor',color_bg);
+
+});
+
+
+$('#menu_act_bg_col').on('move.spectrum', function(e, tinyColor) {
+    var btn_color_bg = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#btn_colo").css('backgroundColor',btn_color_bg);
+
+});
+
+$('#your_name').on('move.spectrum', function(e, tinyColor) {
+   var colorVal = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#y-name").css('color',colorVal);
+});
+
+$('#Pro_des').on('move.spectrum', function(e, tinyColor) {
+ var colorVal = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#y-des").css('color',colorVal);
+});
+
+$('#btn_text_col').on('move.spectrum', function(e, tinyColor) {
+ var colorVal = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#btn_colo").css('color',colorVal);
+
+
+});
+
+$('#Men_col').on('move.spectrum', function(e, tinyColor) {
+  var colorVal = "rgba(" + tinyColor._r + ", " + tinyColor._g + ", " + tinyColor._b + ", " + tinyColor._a + ")";
+  $("#right-menu_acc li a").css('color',colorVal);
+ 
+});
+</script>
+</body>
+
+</html>
